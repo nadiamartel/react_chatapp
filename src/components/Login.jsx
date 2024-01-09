@@ -16,7 +16,7 @@ const Login = () => {
     return (
         <div>
             <button className="btn-login" onClick={login}>
-                <i class="fa-brands fa-google"></i>
+                <i className="fa-brands fa-google"></i>
                 Sing in whith google
             </button>
         </div>

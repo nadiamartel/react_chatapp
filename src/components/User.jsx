@@ -1,9 +1,11 @@
+import LogOut from "./LogOut";
 import Login from "./Login";
 
 const User = () => {
     return(
-        <div>
+        <div className="right-side">
             <Login />
+            <LogOut />
         </div>
     )
 }
