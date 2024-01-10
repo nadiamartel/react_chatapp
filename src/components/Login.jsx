@@ -1,11 +1,7 @@
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import { auth } from "../firebase";
-import { useAuthState } from "react-firebase-hooks/auth"
 
 const Login = () => {
-
-    const [user] = useAuthState(auth); //para recuperar al usuario actual
-    console.log(user);
 
     const login = () => {
         const provider = new GoogleAuthProvider();
