@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { auth, db } from "../firebase.js";
 import { query, collection, orderBy, onSnapshot } from "firebase/firestore";
 import Message from "./Message.jsx";
+import SendMessage from "./SendMessage.jsx";
 
 const Chat = () => {
 
@@ -22,20 +23,21 @@ const Chat = () => {
             setMessages(currentMsg);
         })
         return unsubscribe;
-    })
+    }, [])
 
     return (
         <section className="chat-content">
             {
-                messages && messages.map(item =>{
-                    return(
-                        <Message 
-                            key={ item.id }
-                            message={ item.content } //todo el contenido guardado arriba
+                messages && messages.map(item => {
+                    return (
+                        <Message
+                            key={item.id}
+                            message={item.content} //todo el contenido guardado arriba
                         />
                     )
                 })
             }
+            <SendMessage />
         </section>
     )
 }
