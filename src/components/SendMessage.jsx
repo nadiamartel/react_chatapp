@@ -23,10 +23,11 @@ const SendMessage = () => {
 
     const emoji = () => setOpen("open");
     const closeEmoji = () => setOpen("close");
-    const onEmojiClick = (event, emojiObject) =>{
-        console.log(PointerEvent);
-        setInput(`${input}${emojiObject.img}`)
+    const onEmojiClick = (emojiData, event) => {
+        console.log(emojiData);
+        setInput(`${input}${emojiData.emoji}`);
     }
+    
 
     return (
         <div>
