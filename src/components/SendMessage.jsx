@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "../firebase";
+import EmojiPicker from 'emoji-picker-react';
 
 const SendMessage = () => {
 
     const [input, setInput] = useState("");
+    const [open, setOpen] = useState("close");
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -12,16 +14,40 @@ const SendMessage = () => {
         await addDoc(collection(db, "messages"), {
             text: input,
             name: displayName,
-            uid,
+            uid, //revisar esta linea que crashea
             photo: photoURL,
             timestamp: serverTimestamp()
         })
         setInput("");
     }
 
+    const emoji = () => setOpen("open");
+    const closeEmoji = () => setOpen("close");
+    const onEmojiClick = (event, emojiObject) =>{
+        console.log(PointerEvent);
+        setInput(`${input}${emojiObject.img}`)
+    }
+
     return (
         <div>
             <form onSubmit={onSubmit}>
+                <button
+                    type="button"
+                    className="btn-emoji"
+                    onClick={emoji}
+                >
+                    <i className="fa-regular fa-face-grin-stars"></i>
+                </button>
+                <div className={open}>
+                    <button
+                        type="button"
+                        className="close-emoji"
+                        onClick={closeEmoji}
+                    >
+                        <i className="fa-regular fa-circle-xmark"></i>
+                    </button>
+                    <EmojiPicker onEmojiClick={onEmojiClick}/>
+                </div>
                 <input
                     type="text"
                     placeholder="Enter your message"

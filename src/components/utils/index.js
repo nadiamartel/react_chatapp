@@ -19,7 +19,7 @@ export const formatDate = (objDate) => {
         return "Invalid date";
     }
 
-    const date = new Date(objDate.seconds * 1000);
+    const date = new Date(objDate?.seconds * 1000);
 
     const hours = date.getHours();
     const minutes = date.getMinutes();
