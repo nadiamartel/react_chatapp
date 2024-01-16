@@ -3,6 +3,7 @@ import Login from "./Login";
 import userPhoto from "../assets/user.jpg";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import test from "../assets/name.png";
 
 const User = () => {
 
@@ -16,7 +17,8 @@ const User = () => {
 
     return(
         <div className="right-side">
-            <h1><i className="fa-solid fa-comments"></i>ExpressChat</h1>
+            {/* <h1><i className="fa-solid fa-comments"></i>ExpressChat</h1> */}
+            <img src={test} alt="logo" className="logo" />
             <article className="card-user">
                 <img src={image} alt="userPhoto"  referrerPolicy="no-referrer"/>
                 <p>{name}</p>
