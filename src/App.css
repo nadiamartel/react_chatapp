@@ -1,14 +1,13 @@
+body{
+  background: url("./assets/bg.webp");
+}
+
 .App {
     text-align: center;
     width: 70%;
     margin: 2% auto;
     display: flex;
     gap: 20px;
-  }
-
-  .logo img{
-    justify-content: center;
-    width: 20px;
   }
   
   /* Chat Section */
@@ -147,10 +146,15 @@
   /* User Component */
   .right-side {
     width: 23%;
+    align-items: center;
   }
   .right-side h1 i {
     margin-right: 10px;
   }
+  .right-side img {
+    max-width: 90%;
+  }
+
   .card-user {
     border: 1px solid #d4d3d3;
     border-radius: 25px;
