@@ -153,6 +153,7 @@ body{
   }
   .right-side img {
     max-width: 90%;
+    border-radius: 27px;
   }
 
   .card-user {

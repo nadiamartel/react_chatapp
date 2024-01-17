@@ -3,7 +3,7 @@ import Login from "./Login";
 import userPhoto from "../assets/user.jpg";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import test from "../assets/name.png";
+import test from "../assets/name_bg.png";
 
 const User = () => {
 
