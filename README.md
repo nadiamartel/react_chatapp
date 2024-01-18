@@ -15,18 +15,18 @@ Bienvenidx a este proyecto de chat grupal en tiempo real desarrollado con React 
 
 - **Autenticación con Google:** Inicia sesión de manera fácil y segura utilizando tu cuenta de Google.
 - **Historial de Mensajes:** Todos los mensajes se almacenan de manera segura en Firebase Firestore Database para que puedas acceder al historial en cualquier momento.
-- **Emoji Picker React (v4):** Hemos integrado la biblioteca Emoji Picker React para añadir un toque divertido a tus mensajes. [¡Explora la librería aquí!](enlace_a_la_libreria)
+- **Emoji Picker React (v4):** Se integro la biblioteca Emoji Picker React para añadir un toque divertido a tus mensajes. [¡Explora la librería aquí!](https://www.npmjs.com/package/emoji-picker-react?activeTab=readme)
 
 ## Capturas de Pantalla
 
-![Captura de Pantalla 1](ruta_a_la_imagen_1.png)
-![Captura de Pantalla 2](ruta_a_la_imagen_2.png)
+![Captura de Pantalla 1](/public/cap1.PNG)
+![Captura de Pantalla 2](/public/cap2.PNG)
 
 ## Configuración del Proyecto
 
 1. Clona el repositorio.
 2. Instala las dependencias usando `npm install`.
-3. Configura tu proyecto en Firebase y actualiza las credenciales en el archivo de configuración.
+3. Configura tu proyecto en Firebase y actualiza las credenciales en el archivo de configuración. Consulta la [documentación de Firebase](https://firebase.google.com/docs) para obtener ayuda detallada.
 4. Inicia la aplicación con `npm run dev`.
 
 ## Contribuciones
