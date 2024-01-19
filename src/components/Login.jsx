@@ -1,11 +1,31 @@
-import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebase";
+import Swal from "sweetalert2";
 
 const Login = () => {
 
-    const login = () => {
+    const login = async() => {
         const provider = new GoogleAuthProvider();
-        signInWithRedirect(auth, provider)
+
+        try {
+            await signInWithPopup(auth, provider)
+            Swal.fire({
+                icon: "success",
+                title: "Welcome!",
+                text: "You have successfully logged in with Google",
+                timer: 3000,
+                timerProgressBar: true
+            })
+        } catch (error) {
+            console.error("Error when authenticating with Google", error.message);
+            Swal.fire({
+                icon: "error",
+                title: "Authentication Error",
+                text: "There was a problem signing in with Google. Please try again",
+                timer: 3000,
+                timerProgressBar: true
+            })
+        }
     }
 
 
