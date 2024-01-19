@@ -15,7 +15,9 @@ Bienvenidx a este proyecto de chat grupal en tiempo real desarrollado con React 
 
 - **Autenticación con Google:** Inicia sesión de manera fácil y segura utilizando tu cuenta de Google.
 - **Historial de Mensajes:** Todos los mensajes se almacenan de manera segura en Firebase Firestore Database para que puedas acceder al historial en cualquier momento.
-- **Emoji Picker React (v4):** Se integro la biblioteca Emoji Picker React para añadir un toque divertido a tus mensajes. [¡Explora la librería aquí!](https://www.npmjs.com/package/emoji-picker-react?activeTab=readme)
+- **Emoji Picker React (v4):** Se integro la biblioteca Emoji Picker React para añadir un toque divertido a tus mensajes. [¡Explora la librería aquí!](https://www.npmjs.com/package/emoji-picker-react?activeTab=readme).
+- **Alertas Personalizadas:** Para mejorar la experiencia del usuario, se integro la libreria SweetAlert2. [¡Conoce la libreria aquí!](https://sweetalert2.github.io/#examples)
+
 
 ## Capturas de Pantalla
 
