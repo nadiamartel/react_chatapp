@@ -15,3 +15,6 @@ const firebaseConfig = {
 
   export const auth = getAuth(app);
   export const db = getFirestore(app);
+
+  //cambiar las reglas de seguridad 
+  //https://console.firebase.google.com/u/0/project/react-chat-5d9c8/firestore/rules
